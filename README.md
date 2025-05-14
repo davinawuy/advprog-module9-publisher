@@ -1,7 +1,14 @@
-How much data your publisher program will send to the message broker in one run? 
+## How much data your publisher program will send to the message broker in one run? 
 
 Since there are 5 messeges total each having about ~29 bytes per message  there is a total size of around ~145 bytes
 
-The url of: “amqp://guest:guest@localhost:5672” is the same as in the subscriber program, what does it mean?
+## The url of: “amqp://guest:guest@localhost:5672” is the same as in the subscriber program, what does it mean?
 
-They point to the same message broker meaning that they will authenticate with
+They point to the same message broker meaning that they will authenticate with the same guest user and talk to the same message broker on the local machine. They will also therefore share the connection ore queue meaning that they will also communicate to the user create queue.
+
+## Running RabbitMQ as message broker
+
+![RabbitMQ Architecture](RabbitMQ.png)
+
+The RabbitMQ dashboard shows thE broker is running with 1 connection, 2 queues, and 1 consumer. Message rates are currently at 0.00/s, indicating that no messages are being actively published, delivered. The spike in the graph earlier suggests that a brief burst of messages was handled. Other than that no other events are going on and the broker remains idle.
+
