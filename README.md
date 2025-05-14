@@ -17,3 +17,10 @@ The RabbitMQ dashboard shows thE broker is running with 1 connection, 2 queues, 
 ![Event Observing](sendandprocessevent.png)
 
 The event I notice is that for everytime I send a message from the publisher to the subscriber side which will tnen obtain that message almost instantly. Here the machines were ran twice and therefore a total of 10 messages were sent. The messages were sent in two different groups even then this will still produce the ids from 1-5 twice.
+
+## Monitoring chart based on publisher.
+
+![RabbitMQMonitor.png](RabbitMQMonitor.png)
+
+From the two events of the previous two instances of running the publisher code I can see that there are two spikes in the graph which represents both instances which were done at seperate times. I can also see that at both times it consumes the same amount of resources as the height of the spikes are the same. So each spike corresponds to a instance of running publisher.
+
